@@ -1,0 +1,43 @@
+
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-controller="MailCtrl">
+<!--   <div class="col w-md bg-light dk b-r bg-auto">
+    <div class="wrapper b-b bg" >
+      <button class="btn btn-sm btn-default pull-right visible-sm visible-xs" ui-toggle-class="show" target="#email-menu"><i class="fa fa-bars"></i></button>
+      <a ui-sref="app.mail.compose" class="btn btn-sm btn-danger w-xs font-bold">Compose</a>
+    </div>
+    <div class="wrapper hidden-sm hidden-xs" id="email-menu">
+      <ul class="nav nav-pills nav-stacked nav-sm">
+        <li ng-repeat="fold in folds" ui-sref-active="active">
+          <a ui-sref="app.mail.list({fold:fold.filter})">
+            {{fold.name}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div> -->
+
+<!--   <div >
+     <div ng-include="'tpl/app_calendar.html'"></div>
+  </div>
+ -->
+
+     <div class="col w-md w-auto-xs bg-light dk bg-auto b-l " >
+      <div class="wrapper">
+        <div class="bg-white-only r r-2x m-b-xs wrapper-sm {{e.className[0]}}" >          
+          <input ng-model="e.title" class="form-control m-t-n-xs no-border no-padder no-bg">
+          <a class="pull-right text-xs text-muted" ng-click="remove($index)"><i class="fa fa-trash-o"></i></a>
+          <div class="text-xs text-muted">{{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}</div>
+        </div>
+      </div>
+    </div> 
+
+  <div class="col">
+     <!-- <div ng-include="'tpl/app_calendar.html'" id="calendar-event"></div> -->
+     <div ng-include="'tpl/mail.list.html'"></div>
+  </div>
+
+  <div class="col">
+    <div ui-view></div>
+  </div>
+
+</div>
